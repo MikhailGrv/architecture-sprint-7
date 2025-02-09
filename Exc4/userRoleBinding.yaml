@@ -1,0 +1,53 @@
+# sprint-7-exc4 binding.yaml
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: user1
+subjects:
+- kind: User
+  name: user-reader1
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: resource-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: user2
+subjects:
+- kind: User
+  name: user-reader2
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: resource-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: admin1
+subjects:
+- kind: User
+  name: administrator
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: admin2
+subjects:
+- kind: User
+  name: administrator2
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
