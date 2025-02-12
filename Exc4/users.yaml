@@ -1,0 +1,32 @@
+# sprint-7-exc4 users.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: User
+metadata:
+  name: user-reader1
+  namespace: default
+secrets:
+- name: user-reader1-token
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: User
+metadata:
+  name: user-reader2
+  namespace: default
+secrets:
+- name: user-reader2-token
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: User
+metadata:
+  name: admin
+  namespace: default
+secrets:
+- name: admin-token
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: User
+metadata:
+  name: admin2
+  namespace: default
+secrets:
+- name: admin-token
